@@ -1,0 +1,94 @@
+body{
+    font-family:'Tajawal', sans-serif;
+    font-size: 18px;
+}
+
+.pageBody{
+    
+    padding-top: 2px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+.pageBody h3 {
+    border-bottom: 2px solid rgb(239, 125, 11);
+    
+    padding-bottom: 6px;
+}
+
+#firstName ,#lastName , #gsmNumber , #emailAddress ,#userName ,#passw0rd ,#rPassw0rd ,#birthdayContainer {
+    
+    font-family: 'Tajawal' ,sans-serif;
+    margin: auto;
+    width: 80%;
+    display: inline-block;
+    font-size: 20px;
+    font: bold;
+    padding: 7px 9px;
+    border: solid 1px orange;
+    border-radius: 9px; 
+    
+
+}
+input:hover {
+    background-color: rgb(81, 81, 81);
+    color: black;
+  }
+
+#Ssubmit {
+    font-family: 'Tajawal', sans-serif ;
+    margin: auto;
+    width: 80%;
+    display: inline-block;
+    font-size: 20px;
+    padding: 7px 9px;
+    border: solid 1px orange;
+    
+}
+
+
+
+
+
+
+
+.pageBody select{
+    
+    font-family: 'Tajawal', sans-serif;
+    margin: auto;
+    width: 80%;
+    display: inline-block;
+    font-size: 20px;
+    font: bold;
+    padding: 7px 9px;
+    border: solid 1px orange;
+    border-radius: 9px;  
+
+}
+select {
+
+    width: auto;
+}
+.pageBody textarea{
+    margin: auto;
+    width: 80%;
+    display: inline-block;
+    font-size: 20px;
+    font: bold;
+    padding: 7px 9px;
+    border: solid 1px orange;
+    border-radius: 9px;  
+
+}
+
+.copyRight{
+    
+    font-size: 13px;
+    text-align: center;
+    color: rgb(60, 59, 59);
+    margin-top: 20px;
+    
+    
+}
+

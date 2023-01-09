@@ -1,0 +1,93 @@
+
+body{
+    font-family:'Tajawal', sans-serif;
+    font-size: 18px;
+}
+.head{  
+      padding: 1rem;
+    background-color: rgba(0, 103, 143, 1);
+    box-shadow: -1px 5px 12px 6px;
+    border-radius: 22px;
+    margin: 22px;
+}
+.head input{
+    border-radius: 4px;
+    font-family:'Tajawal', sans-serif;
+    font-size: 18px;
+    background-color:rgba(0, 103, 143, 1);
+    border:none;
+    padding: 9px;
+}
+.admin {
+    font-family:'Tajawal', sans-serif;
+    font-size: 18px;
+     border: 1px solid #ffcb05; 
+     border-right: 1px solid #ffcb05;
+      border-width: 1px solid #ffcb05;
+      border-bottom: 1px solid #ffcb05;
+}
+
+.admin thead{
+    font-family:'Tajawal', sans-serif;
+    font-size: 18px;
+     background-color: rgba(0, 103, 143, 1);
+     border-bottom: 1px solid #ffcb05;
+    background-color: rgba(0, 103, 143, 1);
+}
+.admin thead tr{
+    font-family:'Tajawal', sans-serif;
+    font-size: 18px;
+    border: 1px solid white; 
+     border-right: 1px white;
+     border-width: 1px white;
+     background-color:rgba(0, 103, 143, 1);
+     border-bottom: 1px solid white;
+}
+.admin thead td{
+    font-family:'Tajawal', sans-serif;
+    font-size: 18px;
+    border: 1px solid white; 
+     border-right: 1px white;
+     border-width: 1px white;
+     background-color: rgba(0, 103, 143, 1);
+     border-bottom: 1px solid white;
+}
+.admin  tr {
+    font-family:'Tajawal', sans-serif;
+    font-size: 18px;
+    border: 1px solid #ffcb05; 
+     border-right: 1px solid #ffcb05;
+      border-width: 1px solid #ffcb05;
+      border-bottom: 1px solid #ffcb05;
+}
+.admin  td {
+    font-family:'Tajawal', sans-serif;
+    font-size: 18px;
+    border: 1px solid #ffcb05; 
+     border-right: 1px solid #ffcb05;
+      border-width: 1px solid #ffcb05;
+      border-bottom: 1px solid #ffcb05;
+}
+
+ .inpat input{
+     border-radius: 4px;
+     font-family:'Tajawal', sans-serif;
+     font-size: 18px;
+     background-color:#ffcb05;
+     border-radius: 15px;
+     padding: 9px;
+     border:none;
+     border-radius: 22px;
+ }
+
+.inpt{
+     border-radius: 4px;
+    font-family:'Tajawal', sans-serif;
+    font-size: 18px;
+    background-color:#ffcb05;
+    border-radius: 15px;
+    padding: 9px;
+    border:none;
+    border-radius: 22px;
+
+}

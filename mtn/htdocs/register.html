@@ -1,0 +1,92 @@
+
+<form class="regForm" method="post" action="http://mtn.infinityfreeapp.com/php/insert.php?who=users" id="regForm" name="regForm" method="post"
+ onsubmit="vaildateForm()">
+        
+        <div class="pageBody">
+        <h1 id="register_process">Registration</h1>
+        <h3 id="registeration_information">Enter the registeration information</h3>
+        <select id="title" class="title" name="title" style="margin-top: 15px;" required="required">
+            <option id="_title">Title</option>
+            <option value="mr" id="mr">Mr</option>
+            <option value="lady" id="lady">Lady</option>
+            <option value="ms" id="ms">Ms</option>
+            <option value="gentlemen" id="gentlemen">Gentlemen</option>
+            <option value="dr" id="dr">Dr</option>
+            <option value="other" id="other">Other</option>
+        </select>
+        <div class="groupInputs">
+        <input type="text" placeholder="First Name" required="required" name="f_name" id="firstName"  style="margin-top: 15px;" onmouseover="" onmouseout="">
+        <input type="text" placeholder="Last Name" required="required" name="l_name" id="lastName" style="margin-top: 10px;" onmouseover="" onmouseout="">
+        <input type="text" placeholder="Mobile Number" required="required" name="phone_number" id="gsmNumber" value="963" style="margin-top: 10px;" onmouseover="" onmouseout="">
+        <input type="email" placeholder="E-Mail" required="required" name="email" id="emailAddress" style="margin-top: 10px;" onmouseover="" onmouseout="">
+        <input type="text" placeholder="User Name" required="required" name="user_name" id="userName" style="margin-top: 10px;" onmouseover="" onmouseout="" onkeyup="fUsernameCheck ()">
+        <span>  <h5 class="uTexthelper" id="hUserName" style="font-size:12px;">Any text with a minimum of 8 characters</h5> </span>
+        <input type="password" placeholder="Password" required="required" name="password" id="passw0rd" class="password" style="margin-top: 10px;" onmouseover="fmOver(this)" onmouseout="fmOut(this)" onkeyup="fValidate ()">
+        <input type="password" placeholder="Confirm Password" required="required" name="rPassw0rd" id="rPassw0rd" style="margin-top: 10px;"onmouseover="fmOver(this)" onmouseout="fmOut(this)" onkeyup="fPvalidate()">
+        <span>  <h5 class="PTexthelper" id="uPper" style="font-size:12px; " >At least 8 characters and contain uppercase and lowercase letters and numbers</h5> </span>
+        </div>
+
+        <select id="city" class="city" name="city" style="margin-top: 15px;">
+            <option selected="selected" id="_city">City</option>
+            <option value="damascus" id="damascus">Damascus</option>
+            <option value="aleppo" id="aleppo">Aleppo</option>
+            <option value="homs" id="homs">Homs</option>
+            <option value="latakia" id="latakia">Latakia</option>
+            <option value="hama" id="hama">Hama</option>
+            <option value="tartous" id="tartous">Tartous</option>
+            <option value="suwayda" id="suwayda">Al-Suwayda</option>
+            <option value="hasakah" id="hasakah">Al-Hasakah</option>
+            <option value="qamishli" id="qamishli">Al-Qamishli</option>
+            <option value="raqqa" id="raqqa">Al-Raqqa</option>
+            <option value="kenitra" id="kenitra">Al-Kenitra</option>
+            <option value="deir_ezzor" id="deir_ezzor">Deir-Ezzor</option>
+            
+        </select>
+        
+        <textarea rows="4" cols="50" required="required" id="address" name="address" placeholder="Enter your address" style="margin-top: 15px;"></textarea>
+        <select id="gender" name="gender" style="margin-top: 15px;">
+            <option id="_gender">Gender</option>
+            <option value="1" id="male">Male</option>
+            <option value="2" id="female">Female</option>
+        </select>
+        <div id="birthdayContainer" style="margin-top: 15px;">
+            <label id="birth">   Birth :   </label>
+        <input type="date"  dir="rtl" name="birthday" id="birthDay"  >
+        </div>
+
+        <select required="required" id="occupation" name="occupation" style="margin-top: 15px;">
+            <option selected="selected" id="job">Job</option>
+            <option value="Financial Accounting" id="job1">Financial Accounting</option>
+            <option value="Information Technology" id="job2">Information Technology</option>
+            <option value="Consulting" id="job3">Consulting</option>
+            <option value="Customer Service / Support" id="job4">Customer Service / Support</option>
+            <option value="Education / Training" id="job5">Education / Training</option>
+            <option value="Government employee / Military" id="job6">Government employee / Military</option>
+            <option value="Administrative" id="job7">Administrative</option>
+            <option value="Human Resources / Administration" id="job8">Human Resources / Administration</option>
+            <option value="Manufacturing / Production / Operations" id="job9">Manufacturing / Production / Operations</option>
+            <option value="Research and Development" id="job10">Research and Development</option>
+            <option value="Marketing" id="job11">Marketing</option>
+            <option value="Sales" id="job12">Sales</option>
+            <option value="Private job" id="job13">Private job</option>
+            <option value="Student" id="job14">Student</option>
+            <option value="Tradesman / Craftsman" id="job15">Tradesman / Craftsman</option>
+            <option value="Other" id="job16">Other</option>
+        </select>
+        
+        <div class="terms" style="margin-top: 15px;">
+        <input type="checkbox" id="termsAndCondtion" name="termsAndCondtion" required="required">
+        <label id="acceptTerms">I agree to the terms and conditions</label>
+        </div>
+
+        <input type="submit" placeholder="إرسال" value="Send" name="submit" id="Ssubmit"   style="margin-top: 15px;">
+
+
+        
+
+
+    </div>
+    <br>
+    <br>
+    <br>
+    </form>

@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html id="lan" lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> 
+      <link href="assets/css/ziok.css" rel="stylesheet">
+    <title>ADMIN.MTN</title>
+    <script src="assets/js/admin.js"></script> 
+        
+        <div class="head">
+
+       
+        <form>
+      <h2>  <input type="button" value="admins" onclick="document.getElementById('show jobs').hidden=true,document.getElementById('show admins').hidden=false,document.getElementById('show users').hidden=true,document.getElementById('show offers').hidden=true,document.getElementById('show bills').hidden=true" >
+        <input type="button" value="users" onclick="document.getElementById('show jobs').hidden=true,document.getElementById('show users').hidden=false,document.getElementById('show admins').hidden=true,document.getElementById('show offers').hidden=true,document.getElementById('show bills').hidden=true" >
+        <input type="button" value="offers" onclick="document.getElementById('show jobs').hidden=true,document.getElementById('show offers').hidden=false,document.getElementById('show admins').hidden=true,document.getElementById('show users').hidden=true,document.getElementById('show bills').hidden=true" >
+           <input type="button" value="bills" onclick="document.getElementById('show jobs').hidden=true,document.getElementById('show bills').hidden=false,document.getElementById('show admins').hidden=true,document.getElementById('show users').hidden=true,document.getElementById('show offers').hidden=true" >
+          <input type="button" value="jobs" onclick="document.getElementById('show jobs').hidden=false,document.getElementById('show bills').hidden=true,document.getElementById('show admins').hidden=true,document.getElementById('show users').hidden=true,document.getElementById('show offers').hidden=true" >
+          <input type="button" value="log out" onclick="document.getElementById('go').click()">
+          </h2>
+        <a href="http://mtn.infinityfreeapp.com/php/admin.php?who=destroy" id="go"></a>
+    </form>
+     </div>
+</head>
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<body>
+<footer id="show admins" >
+<form name="admins" method="post" action="http://mtn.infinityfreeapp.com//php/edit.php?who=admins"  >
+    <h2>admins : </h2>
+ <div class="inpat"> <input type="button" onclick="document.getElementById('admins edit').hidden=false,document.getElementById('admins delete').hidden=true,document.getElementById('add admin').hidden=true" value="edit_admin">
+      <input type="button" onclick="document.getElementById('admins edit').hidden=true,document.getElementById('admins delete').hidden=false,document.getElementById('add admin').hidden=true" value="delete_admin">
+    <input type="button" onclick="document.getElementById('admins edit').hidden=true,document.getElementById('admins delete').hidden=true,document.getElementById('add admin').hidden=false,document.getElementById('admins').hidden=true" value="add_admin">
+ </div>  <table id="admins"  name="admins" class="admin" >
+    <thead>
+        <tr><td>id </td>
+                <td>user_name </td>
+                <td>password</td>
+                <td>email</td></tr> </thead>
+    </table>
+</form>
+<!--==========================================================================================================================================================================-->
+<form name="admins" method="post" action="http://mtn.infinityfreeapp.com//php/insert.php?who=admins" >
+    <table id="add admin"  hidden="true" name="admins"  class="new">
+        <tr><td>add admin</td></tr>
+          <tr>  <td>add user name </td><td> <input type="text" name="user_name" class="new"> </td></tr>
+           <tr> <td>add password</td><td> <input type="text" name="password" class="new"> </td></tr>
+           <tr> <td>add email</td><td> <input type="text" name="email" class="new"> </td></tr>
+           <tr>  <td><input type="submit" value="add" onclick="return confirm('are you wont to add admin?')" class="inpt"></tr>
+            <tr>  <td>  <input type="button" value="go back" onclick="document.getElementById('add admin').hidden=true,document.getElementById('admins').hidden=false" class="inpt"></td></tr>
+
+    </table>
+</form>
+<!--==========================================================================================================================================================================-->
+<form name="admins" method="post" action="http://mtn.infinityfreeapp.com/php/edit.php?who=admins" >
+    <table id="admins edit"  hidden="true" name="admins" >
+        <tr><td>edit admin </td></tr>
+        <tr><td>input admin id </td><td> <input type="text" name="id" class="new"> </td></tr>
+          <tr>  <td>new user name </td><td> <input type="text" name="user_name" class="new"> </td></tr>
+          <tr>  <td> new password</td><td> <input type="text" name="password" class="new"> </td></tr>
+          <tr>  <td> new email</td><td> <input type="text" name="email" class="new"> </td></tr>
+           <tr><td> <input type="submit" class="inpt" value="edit" onclick="return confirm('are you wont to edite admin?')">
+            <input type="button" class="inpt" value="go back" onclick="document.getElementById('admins edit').hidden=true"> </td></tr>
+        </table>
+</form>
+<!--==========================================================================================================================================================================-->
+<form name="admins" method="post" action="http://mtn.infinityfreeapp.com/php/delete.php?who=admins" >
+    <table id="admins delete"  hidden="true" name="admins" >
+        <tr><td>delete admin</td></tr>
+        <tr id=><td>input admin id </td><td> <input type="text" name="id" class="new"> </td>
+        </tr>
+        <tr> <td><input type="submit" class="inpt" value="delete" onclick="return confirm('are you wont to delete admin?')"> <td>
+           <input type="button" class="inpt" value="go back" onclick="document.getElementById('admins delete').hidden=true"></td></tr>
+       </table>
+</form>
+</footer>
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<footer id="show users" hidden="true">
+<form method="post" action=""   name="users" >
+    <h2>  users : </h2>
+<div class="inpat">
+    <input type="button" onclick="document.getElementById('delete user').hidden=false" value="delete_user"></div>
+    <table id="users"   class="admin" >
+     <thead>  
+            <td>id</td><td>title</td><td>first name</td><td>last name</td>
+            <td>phone number</td><td>city</td><td>address</td><td>occupation</td><td>birthday</td>
+            <td>user name</td><td>email</td><td>password</td></tr> </thead>
+    </table>
+</form>
+<!--==========================================================================================================================================================================-->
+
+<form method="post" action="http://mtn.infinityfreeapp.com/php/delete.php?who=users">
+    <table id="delete user" hidden="true" name="users" >
+        <tr><td>delete user</td></tr>
+        <td>input user id </td><td> <input type="text" name="id" class="new"> </td>
+           <tr> <td><input type="submit"  class="inpt" value="delete user" onclick="return confirm('are you wont to delete user?')">
+            <input type="button"  class="inpt" value="go back" onclick="document.getElementById('delete user').hidden=true"></td></tr>
+         </table>
+</form>
+</footer>
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<footer hidden="true" id="show offers">
+<form  method="post" action="http://mtn.infinityfreeapp.com/php/edit.php?who=offers">
+<h2>offers : </h2>
+    <div class="inpat">
+ <input type="button"  onclick="document.getElementById('offer edit').hidden=false,document.getElementById('offer delete').hidden=true,document.getElementById('add offer').hidden=true" value="edit offer">
+            <td><input type="button"  onclick="document.getElementById('offer delete').hidden=false,document.getElementById('offer edit').hidden=true,document.getElementById('add offer').hidden=true" value="delete offer">
+            <input type="button"  onclick="document.getElementById('add offer').hidden=false,document.getElementById('offer edit').hidden=true,document.getElementById('offer delete').hidden=true,document.getElementById('offers').hidden=true" value="add offer">
+            </td></div>
+                <table id="offers"  name="offers" class="admin" >
+   <thead>          
+         <tr id=><td>id </td>
+            <td>offer name </td>
+            <td>message amount</td>
+            <td>minutes amount </td>
+            <td>internet in m.g </td>
+            <td>money value</td>
+            <td>offers code</td></tr></thead>
+    </table>
+    
+</form>
+<!--==========================================================================================================================================================================-->
+
+<form method="post"  action="http://mtn.infinityfreeapp.com/php/insert.php?who=offers">
+    <table id="add offer" hidden="true"  name="offers" >
+        <tr><td>add offer</td></tr>
+        <tr> <td>add name </td><td> <input type="text" name="offer_name" class="new"> </td></tr>
+        <tr> <td>add number of messages </td><td> <input type="text" name="message" class="new"> </td></tr>
+        <tr> <td>add number of minutes </td><td> <input type="text" name="minutes" class="new"> </td></tr>
+       <tr>  <td>add internet amount</td><td> <input type="text" name="internet" class="new"> </td></tr>
+       <tr>  <td>add money value</td><td> <input type="text" name="money_value" class="new"> </td></tr>
+       <tr>  <td>add offer code</td><td> <input type="text" name="offer_code" class="new"> </td></tr>
+           <tr> <td><input type="submit" class="inpt" value="add" onclick="return confirm('are you wont to add offer?')">
+         <input type="button" value="go back" class="inpt" onclick="document.getElementById('add offer').hidden=true,document.getElementById('offers').hidden=false"></td></tr>
+    </table>
+</form>
+<!--==========================================================================================================================================================================-->
+<form method="post" action="http://mtn.infinityfreeapp.com/php/edit.php?who=offers">
+    <table id="offer edit"  hidden="true" name="offers" >
+        <tr><td>edit offer </td></tr>
+        <tr ><td>input offer id </td><td> <input type="text" name="offer id" class="new"> </td></tr>
+         <tr>   <td>new name </td><td> <input type="text" name="offer_name" class="new"> </td></tr>
+         <tr>   <td>new number of message </td><td> <input type="text" name="message" class="new"> </td></tr>
+         <tr>   <td>new number of minutes</td><td> <input type="text" name="minutes" class="new"> </td></tr>
+         <tr>   <td>new internet amount</td><td> <input type="text" name="internet" class="new"> </td></tr>
+         <tr>   <td>new money value</td><td> <input type="text" name="money_value" class="new"> </td></tr>
+       <tr> <td>new offer code</td><td> <input type="text" name="offer_code" class="new"> </td></tr>
+       <tr><td> <input type="submit" class="inpt" value="edit" onclick="return confirm('are you wont to edite offer?')">
+            <input type="button" class="inpt" value="go back" onclick="document.getElementById('offer edit').hidden=true"> </td></tr>
+    </table>
+</form>
+<!--==========================================================================================================================================================================-->
+
+<form method="post" action="http://mtn.infinityfreeapp.com/php/delete.php?who=offers">
+    <table id="offer delete"  hidden="true" name="offers" >
+        <tr><td>delete offer</td></tr>
+        <tr id=><td>input offer id </td><td> <input type="text" name="id" class="new"> </td>
+        </tr>
+        <tr> <td><input type="submit" class="inpt" value="delete" onclick="return confirm('are you wont to delete offer?')"></td> <td>
+           <input type="button" class="inpt" value="go back" onclick="document.getElementById('offer delete').hidden=true"></td></tr>
+        </table>
+</form></footer>
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<footer hidden="true" id="show bills">
+<form  method="post" action="http://mtn.infinityfreeapp.com/php/edit.php?who=bills">
+<h2>bills : </h2>
+    <div class="inpat">
+<input type="button" onclick="document.getElementById('bill delete').hidden=false,document.getElementById('add bill').hidden=true" value="delete bill">
+            <input type="button"  onclick="document.getElementById('add bill').hidden=false,document.getElementById('bill delete').hidden=true,document.getElementById('bills').hidden=true" value="add bill">
+    </div>
+    <table id="bills" name="bills" class="admin" >
+      <thead>  
+        <tr id=><td>id </td>
+            <td>phone number </td>
+            <td>money amount</td>
+            <td>user name</td>
+           </tr></thead>
+    </table>
+</form>
+<!--==========================================================================================================================================================================-->
+
+<form method="post" action="http://mtn.infinityfreeapp.com/php/insert.php?who=bills">
+    <table id="add bill"  hidden="true" name="bills" >
+        <tr><td>add bill</td></tr>
+       <tr>  <td>chose phone number </td><td> <input type="text" name="phone_number" class="new"> </td></tr>
+       <tr>  <td>add money amount </td><td> <input type="text" name="money_amount" class="new"> </td></tr>
+
+         <tr> <td><input type="submit" class="inpt" value="add" onclick="return confirm('are you wont to add bill?')">
+            <input type="button" class="inpt" value="go back" onclick="document.getElementById('add bill').hidden=true,document.getElementById('bills').hidden=false"></td></tr>
+         </table>
+</form>
+<!--==========================================================================================================================================================================-->
+
+<form method="post" action="http://mtn.infinityfreeapp.com/php/delete.php?who=bills">
+    <table id="bill delete" hidden="true" name="bills" >
+        <tr><td>delete offer</td></tr>
+        <tr id=><td>input bill id </td><td> <input type="text" name="id" class="new"> </td>
+        </tr> <tr><td><input type="submit" class="inpt" value="delete" onclick="return confirm('are you wont to delete bill?')"> <td>
+           <input type="button" class="inpt" value="go back" onclick="document.getElementById('bill delete').hidden=true"></td></tr>
+    </table>
+</form></footer>
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<footer hidden="true" id="show jobs">
+    <form>
+<h2>jobs : </h2>
+<div class="inpat"> <input type="button" onclick="document.getElementById('job delete').hidden=false,document.getElementById('add job').hidden=true" value="delete job">
+                <td><input type="button" onclick="document.getElementById('jobs').hidden=true,document.getElementById('add job').hidden=false,document.getElementById('job delete').hidden=true" value="add job"></div>
+        <table id="jobs" name="jobs" class="admin">
+          <thead> 
+            <tr id=><td>id </td>
+                <td>job_name </td>
+            <td>job brunch </td>
+            <td>job degree </td>
+            <td>Experience </td>
+            <td>job title </td>
+            <td> salery </td>
+            <td>job photo </td>
+            </tr> </thead>
+        </table>
+    </form>
+    <!--==========================================================================================================================================================================-->
+
+    <form method="post" action="http://mtn.infinityfreeapp.com/php/insert.php?who=job" enctype="multipart/form-data">
+        <table id="add job" hidden="true" name="jobs" >
+            <tr><td>add job</td></tr>
+           <tr> <td>job name </td><td> <input type="text" name="job_name" class="new"> </td></tr>
+           <tr> <td>job brunch </td><td> <input type="text" name="job_brunch" class="new"> </td></tr>
+           <tr> <td>job degree </td><td> <input type="text" name="job_degree" class="new"> </td></tr>
+           <tr> <td>Experience </td><td> <input type="text" name="Experience" class="new"> </td></tr>
+           <tr> <td>job title </td><td> <input type="text" name="job_title" class="new"> </td></tr>
+           <tr> <td> salery </td><td> <input type="text" name="salary" class="new"> </td></tr>
+           <tr> <td>job photo </td><td> <input type="file" name="job_photo" class="new"> </td></tr>
+               <tr>  <td><input name="upload" class="inpt" type="submit" value="add" onclick="return confirm('are you wont to add job?')">
+                <input type="button" class="inpt" value="go back" onclick="document.getElementById('add job').hidden=true,document.getElementById('jobs').hidden=false"></td></tr>
+              </table>
+    </form>
+    <!--==========================================================================================================================================================================-->
+
+    <form method="post" action="http://mtn.infinityfreeapp.com/php/delete.php?who=job">
+        <table id="job delete" hidden="true" name="jobs" >
+            <tr><td>delete job</td></tr>
+            <tr id=><td>input job id </td><td> <input type="text" name="id" class="new"> </td>
+            </tr>
+            <tr> <td><input type="submit" class="inpt" value="delete" onclick="return confirm('are you wont to delete job?')"> <td>
+            <input type="button" class="inpt" value="go back" onclick="document.getElementById('job delete').hidden=true"></td></tr>
+      </table>
+    </form></footer>
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+</body>
+
+</html>

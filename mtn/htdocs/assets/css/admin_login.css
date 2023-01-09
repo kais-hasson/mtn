@@ -1,0 +1,18 @@
+.hedd{  
+    background-color: rgba(0, 103, 143, 1);
+      box-shadow: -1px 5px 12px 6px;
+    border-radius: 22px;
+    margin: 22px;
+  
+}
+body input{
+    border: 1px solid #ffcb05; 
+    height: 25px ;
+    width: 200px;
+}
+
+input{
+    border: 1px solid #ffcb05; 
+     height: 25px ;
+    width: 200px;
+}

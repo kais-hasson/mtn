@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!DOCTYPE html>
+<html id="lan" lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+      <link href="assets/css/admin_login.css" rel="stylesheet">
+    <title>admin.mtn</title>
+</head>
+<body>
+<div class="hedd">
+   <h2 style="margin-left: 20px">MTN ADMIN:<img src="assets/img/logo.png" height="50" width="50" style="margin-left: 1200px" ></h2>   
+</div>
+<form >
+   <h2>user_name:<br><input type="text" name="user_name" > <br></h2> 
+    <h2>password:<br><input type="password" name="password"><br></h2>
+    <p><span id="show exception"></span></p>
+    <a href="http://mtn.infinityfreeapp.com/admin.html" id="go"></a>
+ <input type="button" value="submit" onclick="get_exception(user_name.value,password.value)">
+    <script>
+        async function get_exception(str_user_name,str_password) {
+            if (str_user_name.length == 0) {
+                document.getElementById("show exception").innerHTML = "";
+                return;}
+           else{var xmlhttp=new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function(){
+                xmlhttp.onreadystatechange = function() {
+                    if(this.responseText==true){
+                        document.getElementById("go").click();
+                    }
+                      else {
+                        document.getElementById("show exception").innerHTML = this.responseText;
+                    }}}
+                xmlhttp.open("get","http://mtn.infinityfreeapp.com/php/admin%20register.php?user_name="+str_user_name+"&password="+str_password,true);
+                xmlhttp.send();
+        }}
+
+    </script>
+</form>
+</body>
+</html>

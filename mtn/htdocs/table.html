@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>E-mail</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    <script>
+        fetch("users.json")
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(users){
+            const table = document.getElementById("tableBody");
+            let rows = "";
+            for(let user of users){
+                rows += "<tr><td>"  + user.name +  "</td><td>"  + user.email +  "</td>";
+            }
+            table.innerHTML = rows;
+        })
+    </script>
+</body>
+</html>
